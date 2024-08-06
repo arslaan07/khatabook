@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="flex justify-between items-center px-20 my-5">
+            <h1 class="text-3xl font-bold">KHATABOOK</h1>
+            <div class="flex gap-10 py-3 items-center"> 
+                <a class="px-3 py-2 text-xl font-medium" href="/create">Create New Hisaab</a>
+                <form action="/search" method="get" class="flex items-center">
+                    <input class="px-3 py-2 border-2 border-zinc-500 rounded-md px-3 w-40 mr-2" id="searchbar" type="text" name="query" placeholder="Search a File...">
+                </form>
+                <a class="text-center px-3 py-2 w-20 text-white border-2 border-red-500 bg-red-500 rounded-md" href="/logout">Logout</a>
+            </div>
+        </div>
+    </header>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
