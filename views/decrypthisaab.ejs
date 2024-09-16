@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Password</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="flex justify-center items-center flex-col h-screen">
+    <h1 class="text-2xl">Enter Password to Access Hisaab</h1>
+    <form action="/verify-passcode/<%= khata._id %>" method="post">
+        <input class="border-2 border-zinc-300 p-2 rounded-md mr-2 outline-none" type="text" name="password" required>
+        <button class="px-3 py-2 w-30 text-white border-2 border-blue-500 bg-blue-500 rounded-md mt-8 hover:cursor-pointer" type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

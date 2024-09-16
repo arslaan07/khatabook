@@ -8,13 +8,19 @@
 <body>
     <header>
         <div class="flex justify-between items-center px-20 my-5">
-            <h1 class="text-3xl font-bold">KHATABOOK</h1>
+            <h1 class="text-3xl font-bold"><a href="/">KHATABOOK</a></h1>
             <div class="flex gap-10 py-3 items-center"> 
+                <% if(typeof showSearchBar !== 'undefined' && showSearchBar) { %>
+                    <form action="/search" method="get" class="flex items-center">
+                        <input class="px-3 py-2 border-2 border-zinc-500 rounded-md px-3 w-40 mr-2" id="searchbar" type="text" name="query" placeholder="Search a File...">
+                    </form>
+                <% } %>
+                
+                <% if (locals.isLoggedIn) { %>
                 <a class="px-3 py-2 text-xl font-medium" href="/create">Create New Hisaab</a>
-                <form action="/search" method="get" class="flex items-center">
-                    <input class="px-3 py-2 border-2 border-zinc-500 rounded-md px-3 w-40 mr-2" id="searchbar" type="text" name="query" placeholder="Search a File...">
-                </form>
                 <a class="text-center px-3 py-2 w-20 text-white border-2 border-red-500 bg-red-500 rounded-md" href="/logout">Logout</a>
+                <% } %>
+      
             </div>
         </div>
     </header>
